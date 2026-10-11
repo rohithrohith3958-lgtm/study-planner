@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5" />
+      <stop offset="50%" stop-color="#6366F1" />
+      <stop offset="100%" stop-color="#06B6D4" />
+    </linearGradient>
+    <linearGradient id="bookGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#E0E7FF" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#1e1b4b" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <!-- Background rounded rect -->
+  <rect width="512" height="512" rx="110" fill="url(#grad)" />
+  
+  <!-- Outer subtle ring -->
+  <circle cx="256" cy="256" r="210" fill="none" stroke="#FFFFFF" stroke-opacity="0.15" stroke-width="6" stroke-dasharray="16 12"/>
+
+  <!-- Main Symbol Group with shadow -->
+  <g filter="url(#shadow)">
+    <!-- Open Book / Study Slate -->
+    <path d="M120 180 C 180 160, 240 175, 256 195 C 272 175, 332 160, 392 180 L 392 340 C 332 320, 272 335, 256 355 C 240 335, 180 320, 120 340 Z" fill="url(#bookGrad)" />
+    <!-- Book spine / crease -->
+    <path d="M 256 195 L 256 355" stroke="#818CF8" stroke-width="5" stroke-linecap="round" />
+    
+    <!-- Sync Arrow Ring around center -->
+    <path d="M 195 240 A 65 65 0 0 1 310 215" fill="none" stroke="#4F46E5" stroke-width="12" stroke-linecap="round"/>
+    <polygon points="310,200 330,220 305,235" fill="#4F46E5" />
+    
+    <path d="M 317 295 A 65 65 0 0 1 202 320" fill="none" stroke="#06B6D4" stroke-width="12" stroke-linecap="round"/>
+    <polygon points="202,335 182,315 207,300" fill="#06B6D4" />
+
+    <!-- Center pulse dot (Offline-First sync indicator) -->
+    <circle cx="256" cy="268" r="14" fill="#10B981" stroke="#FFFFFF" stroke-width="4"/>
+  </g>
+</svg>

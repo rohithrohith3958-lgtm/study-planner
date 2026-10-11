@@ -1,8 +1,20 @@
-# Study Planner
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+</div>
 
-A simple Study Planner project built for a hackathon.
+# Run and deploy your AI Studio app
 
-## Features
-- Organize study tasks
-- Plan study sessions
-- Manage study goals
+This contains everything you need to run your app locally.
+
+View your app in AI Studio: https://ai.studio/apps/d6c9016e-a9e6-49f1-a424-bea18e961ddd
+
+## Run Locally
+
+**Prerequisites:**  Node.js
+
+
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`

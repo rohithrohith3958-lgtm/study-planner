@@ -1,0 +1,6 @@
+{
+  "name": "StudySync - Offline-First Student Study Planner",
+  "description": "An offline-first student study planner with IndexedDB persistence, PWA caching, persistent sync queue, conflict resolution, study plan generator, and automated test suite.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
