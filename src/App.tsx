@@ -317,11 +317,13 @@ export default function App() {
         onPlanImported={refreshData}
       />
 
-      <ConflictResolutionModal
-        conflict={activeConflict}
-        onClose={() => setActiveConflict(null)}
-        onResolved={refreshData}
-      />
+      {activeConflict && (
+        <ConflictResolutionModal
+          conflict={activeConflict}
+          onClose={() => setActiveConflict(null)}
+          onResolved={refreshData}
+        />
+      )}
 
       <SyncQueueDrawer
         isOpen={isSyncDrawerOpen}

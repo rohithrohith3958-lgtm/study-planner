@@ -9,13 +9,17 @@ interface ConflictResolutionModalProps {
   onResolved: () => void;
 }
 
-export const ConflictResolutionModal: React.FC<ConflictResolutionModalProps> = ({
+interface ConflictResolutionDialogProps {
+  conflict: ConflictRecord;
+  onClose: () => void;
+  onResolved: () => void;
+}
+
+const ConflictResolutionDialog: React.FC<ConflictResolutionDialogProps> = ({
   conflict,
   onClose,
   onResolved,
 }) => {
-  if (!conflict) return null;
-
   const { localTask, remoteTask } = conflict;
   const [selectedResolution, setSelectedResolution] = useState<'local' | 'remote' | 'merged'>('merged');
 
@@ -297,5 +301,22 @@ export const ConflictResolutionModal: React.FC<ConflictResolutionModalProps> = (
         </div>
       </div>
     </div>
+  );
+};
+
+export const ConflictResolutionModal: React.FC<ConflictResolutionModalProps> = ({
+  conflict,
+  onClose,
+  onResolved,
+}) => {
+  if (!conflict) return null;
+
+  return (
+    <ConflictResolutionDialog
+      key={conflict.id}
+      conflict={conflict}
+      onClose={onClose}
+      onResolved={onResolved}
+    />
   );
 };
